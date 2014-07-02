@@ -1,0 +1,187 @@
+/* todo app */
+.todo_section {
+    margin:0;
+    .todo_date {
+        padding: 4px 10px 10px;
+        border-bottom: 1px solid #ddd;
+        h4 {
+            .custom_font(400, 18px, 24px);
+            display: inline-block;
+            margin: 0;
+        }
+        .label {
+            padding: 2px 6px;
+        }
+        .label-default {
+            background: #ccc;
+        }
+        > span {
+            font-weight: 300;
+            font-size: 12px;
+        }
+    }
+    .todo_list_wrapper {
+        margin:0;
+        padding:0;
+        li {
+            list-style:none;
+            padding:14px 10px;
+            + li {
+				border-top:1px solid #eee;
+			}
+        }
+    }
+    .todo_title {
+        margin:0;
+        overflow:hidden;
+        a {
+            color: @text-primary;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .todo_due_date {
+            color: #999;
+            font-size: 12px;
+        }
+    }
+    .todo_checkbox {
+        float: left;
+        margin: 2px 14px 0 0;
+        min-width: 18px;
+    }
+    .todo_star {
+        float: left;
+        margin-right: 14px;
+        padding-top: 2px;
+        span {
+            font-size: 18px;
+            color: #ddd;
+            cursor: pointer;
+        }
+    }
+    li.todo_checked {
+		background: #f9f9f9;
+        .todo_title {
+            a,
+			.todo_due_date {
+                color: #bbb;
+            }
+        }
+    }
+    li.todo_stared {
+        .todo_star {
+            span {
+                color: #ffdd46;
+            }
+        }
+    }
+    li {
+        .label {
+            margin: 2px 0 0 10px;
+            padding: 1px 5px;
+            font-size: 10px;
+            font-weight: normal;
+            line-height: 13px;
+            text-transform: uppercase;
+        }
+    }
+    .todo_mix_list {
+        min-height:200px;
+		&.fail {
+			.fail_txt {
+				.custom_font(400, 18px, 24px);
+				padding: 30px 0;
+				display: block;
+			}
+		}
+		.mix,
+		.fail_txt {
+			display: none;
+		}
+    }
+    .todo_mix_filters {
+        padding: 10px 10px 20px;
+    }
+}
+
+/* events list */
+.events_list {
+    margin-bottom: 20px;
+    .box-shadow(0 2px 1px rgba(0,0,0,.08));
+    .events_date {
+        background: #fff;
+        padding: 5px 20px;
+        border: 1px solid #ddd;
+    }
+    .event_date_big {
+        font-size: 64px;
+        position: relative;
+        float: left;
+        margin-right: 20px;
+        color: #3498db;
+        span {
+            position: absolute;
+            left: 2px;
+            top: 24px;
+            width: 44px;
+            background: #fff;
+            text-align: center;
+            .custom_font(400, 26px, 28px);
+            height: 30px;
+            color: @text-primary;
+        }
+    }
+    .event_date_day {
+        overflow: hidden;
+        .custom_font(400, 24px, 28px);
+        padding-top: 8px;
+        display: block;
+    }
+    .event_date_full {
+        overflow: hidden;
+        display: block;
+        color: #999;
+    }
+    .event_item {
+        overflow: hidden;
+        background: #fff;
+        border-width: 0 1px 1px;
+        border-style: solid;
+        border-color: transparent #ddd #ddd;
+        position: relative;
+    }
+    .event_hour {
+        background: #eee;
+        width: 80px;
+        text-align: center;
+        padding-top: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-right: 1px solid #ddd;
+		.custom_font(400, 18px, 24px);
+    }
+    .event_content {
+        padding-left: 80px;
+        margin: 0;
+        li {
+            list-style: none;
+            line-height: 16px;
+            padding: 6px 8px 4px;
+            + li {
+				border-top: 1px dashed #ddd;
+            }
+            p {
+                margin: 0;
+                font-size: 15px;
+            }
+            span {
+                font-size: 11px;
+                color: #999;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

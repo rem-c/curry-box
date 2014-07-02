@@ -1,0 +1,46 @@
+/* easy chart pie */
+.easy_chart {
+    position: relative;
+    text-align: center;
+    margin-right: 20px;
+    span {
+        font-size: 18px;
+        color: @text-primary;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        top: 26px;
+        small {
+            vertical-align: 0;
+            padding-left: 2px;
+            font-size: 14px;
+        }
+    }
+	i {
+		font-size: 32px;
+		position: absolute;
+        top: 50%;
+        left: 0;
+		right: 0;
+		margin: -18px 0 0 0;
+		color: #555;
+	}
+}
+.easyPieChart {
+    i {
+        font-size: 22px;
+        color: #444;
+        padding-top: 20px;
+        display: block;
+        width: auto !important;
+    }
+}
+.easy_chart_desc {
+    overflow: hidden;
+    + .easy_chart {
+		margin-left: 20px;
+		margin-right: 0;
+    }
+}

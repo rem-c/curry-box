@@ -1,0 +1,61 @@
+.daterangepicker {
+	&.dropdown-menu {
+		z-index: 990;
+	}
+	.ranges {
+		li {
+			.border-radius(0);
+			color: @text-primary;
+			&.active,
+			&:hover {
+				background: #aaa;
+				border-color: #aaa;
+			}
+		}
+		.input-mini {
+			height: 29px;
+			.border-radius(0);
+		}
+	}
+	.calendar th {
+		.custom_font(400, 14px, 28px);
+		&.month {
+			.custom_font(400, 16px, 24px);
+		}
+	}
+	thead tr:nth-child(2) th {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.calendar tbody {
+		border-width: 1px 1px 0 0;
+		border-style: solid;
+		border-color: #ddd;
+		td {
+			border-width: 0 0 1px 1px;
+			border-style: solid;
+			border-color: #eee;
+			&.off {
+				background: #f2f2f2;
+				color: #bbb;
+			}
+			&.in-range {
+				background-color: @subactive-background;
+				color: @active-background;
+			}
+			&.active,
+			&:hover {
+				background-color: @active-background;
+				border-color: #ccc;
+				color: #fff;
+			}
+		}
+	}
+	.calendar-date,
+	.calendar th,
+	.calendar th:hover,
+	.calendar td,
+	.calendar td:hover {
+		.border-radius(0);
+	}
+}

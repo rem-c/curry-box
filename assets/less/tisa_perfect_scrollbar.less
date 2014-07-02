@@ -1,0 +1,65 @@
+.ps-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    .ps-scrollbar-x-rail {
+        bottom: 3px;
+        height: 6px;
+    }
+    .ps-scrollbar-y-rail {
+        right: 3px;
+        width: 6px;
+    }
+	.ps-scrollbar-x-rail,
+	.ps-scrollbar-y-rail {
+        position: absolute;
+		.border-radius(4px);
+        .opacity(0.3);
+		.transition(background-color 0.2s linear,opacity 0.2s linear);
+	}
+    .ps-scrollbar-x-rail.in-scrolling,
+	.ps-scrollbar-y-rail.in-scrolling {
+        .opacity(0.9);
+    }
+    .ps-scrollbar-x {
+        bottom: 0;
+        height: 6px;
+    }
+    .ps-scrollbar-y {
+        right: 0;
+        width: 6px;
+    }
+	.ps-scrollbar-x,
+	.ps-scrollbar-y {
+        position: absolute;
+        background-color: #aaa;
+		.border-radius(4px);
+		.transition(background-color 0.2s linear);
+	}
+	&:hover .ps-scrollbar-x-rail,
+	&.hover .ps-scrollbar-x-rail,
+	&:hover .ps-scrollbar-y-rail,
+	&.hover .ps-scrollbar-y-rail {
+		.opacity(0.6);
+	}
+	.ps-scrollbar-x-rail:hover,
+	.ps-scrollbar-x-rail.hover,
+	.ps-scrollbar-y-rail:hover,
+	.ps-scrollbar-y-rail.hover {
+		background-color: #eee;
+		.opacity(0.9);
+	}
+	.ps-scrollbar-x-rail:hover .ps-scrollbar-x,
+	.ps-scrollbar-x-rail.hover .ps-scrollbar-x,
+	.ps-scrollbar-y-rail:hover .ps-scrollbar-y,
+	.ps-scrollbar-y-rail.hover .ps-scrollbar-y {
+		background-color: #999;
+	}
+	
+}
+
+.ps-container.ie6 .ps-scrollbar-x,
+.ps-container.ie .ps-scrollbar-y {
+    font-size:0;
+
+}

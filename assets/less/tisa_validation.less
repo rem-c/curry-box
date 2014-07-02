@@ -1,0 +1,38 @@
+.parsley-errors-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 12px;
+	line-height: 18px;
+	li {
+		background: @brand-danger;
+		color: #fff;
+		padding: 4px 8px;
+		&:first-child {
+			margin-top: 5px;
+		}
+		&:last-child {
+			margin-bottom: 5px;
+		}
+	}
+	.opacity(0);
+	.transition(opacity 300ms ease-in-out);
+	&.filled {
+		.opacity(1);
+	}
+}
+
+.parsley-success {
+	border-color: @brand-success !important;
+}
+.parsley-error {
+	border-color: @brand-danger !important;
+}
+
+input,
+select,
+textarea {
+	& + .parsley-errors-list li:first-child {
+		margin-top: 0;
+	}
+}

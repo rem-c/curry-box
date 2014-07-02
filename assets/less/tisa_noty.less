@@ -1,0 +1,88 @@
+#noty_top_layout_container,
+#noty_bottom_layout_container {
+	width: 98% !important;
+	left: 1% !important;
+}
+#noty_top_layout_container {
+	margin-top: 50px !important;
+}
+#noty_bottom_layout_container {
+	margin-bottom: 10px !important;
+}
+.tisa_theme {
+	overflow: hidden;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+	position: relative;
+	&.noty_container_type_alert {
+		background-color: #fff;
+		border: 1px solid #eee;
+	}
+	&.noty_container_type_information {
+		background-color: @brand-info;
+		color: #fff;
+	}
+	&.noty_container_type_error {
+		background-color: @brand-danger;
+		color: #fff;
+	}
+	&.noty_container_type_warning {
+		background-color: @brand-warning;
+		color: #fff;
+	}
+	&.noty_container_type_success {
+		background-color: @brand-success;
+		color: #fff;
+	}
+	&.noty_container_type_confirm {
+		background-color: #fff;
+	}
+	.noty_message {
+		padding: 10px 20px;
+	}
+	.noty_close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		&:before {
+			position: absolute;
+			top: -2px;
+			right: 8px;
+			content: '×';
+			color: rgba(0,0,0,0.2);
+			cursor: pointer;
+			font-size: 21px;
+			font-weight: 700;
+		}
+		&:hover:before {
+			color: rgba(0,0,0,0.8)
+		}
+	}
+	&:hover > .noty_bar > .noty_message > .noty_close {
+		color: #000;
+	}
+	.noty_buttons {
+		margin: 0 6px;
+		padding: 6px 0;
+		text-align: right;
+		border-top: 1px solid #eee;
+		.btn + .btn {
+			margin-left: 6px;
+		}
+	}
+	& + .tisa_theme {
+		border-top: 1px solid rgba(0,0,0,.2);
+	}
+}
+
+
+.noty_modal.tisa_theme {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0,6);
+	z-index: 10000;
+	display: none;
+	border: none;
+	left: 0;
+	top: 0
+}

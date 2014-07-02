@@ -1,0 +1,46 @@
+#slidebar {
+	background-color: #fff;
+	.box-shadow(-2px 0 0 2px rgba(0, 0, 0, 0.20));
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	top:@navbar-height;
+	z-index: 9999;
+	width: 320px;
+	right: -324px;
+	padding: 20px 0;
+	.transition(all 375ms cubic-bezier(0.075, 0.820, 0.165, 1.000));
+	-webkit-transition-property: -webkit-transform, left, right;
+	-webkit-backface-visibility: hidden;
+	.user_img_grid {
+		padding: 10px 0;
+		.user_img_item {
+			display: block;
+			float: left;
+			margin: 0 8px 8px 0;
+			width: 64px;
+			&:nth-child(n+4) {
+				margin-right: 0
+			}
+		}
+	}
+	@media (max-width: 480px) {
+		width: 250px;
+		right: -254px;
+		.user_img_grid {
+			.user_img_item {
+				width: 60px;
+			}
+		}
+	}
+}
+#slidebar_content {
+	padding: 0 20px;
+	overflow: hidden;
+}
+
+.slidebar-active #slidebar {
+	right: 0;
+}

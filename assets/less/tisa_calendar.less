@@ -1,0 +1,102 @@
+.fc-header {
+	background: #f0f0f0;
+	td {
+		padding: 6px 0;
+	}
+	.fc-button {
+		margin: 5px 0 0;
+		.border-radius(0) !important;
+		background: #fff;
+		border: none;
+		font-size: 12px;
+		.box-shadow(none);
+		text-shadow: none;
+		height: 26px;
+		line-height: 26px;
+		padding: 0 10px;
+		&.fc-state-down,
+		&.fc-state-active {
+			.box-shadow(none);
+			background: @active-background;
+			color: #fff;
+		}
+		&.fc-state-disabled {
+			.opacity(1);
+			background: transparent;
+			color: #888;
+		}
+	}
+	.fc-button + .fc-button {
+		border-left: 1px solid #ddd;
+	}
+	h2 {
+		margin: 0
+	}
+	.fc-header-left {
+		padding-left: 10px;
+	}
+	.fc-header-right {
+		padding-right: 10px;
+	}
+}
+
+.fc-button .fc-icon {
+	font-size: 22px;
+	line-height: 24px;
+}
+
+.fc-grid {
+	.fc-day-number {
+		font-size: 12px;
+		float: none;
+		background: rgba(0,0,0,0.04);
+		padding: 2px;
+	}
+	.fc-day-content {
+		padding-top: 8px;
+	}
+}
+
+.fc {
+	th.fc-day-header,
+	th.fc-week-number {
+		font-weight: normal;
+		font-size: 13px;
+		vertical-align: middle;
+	}
+	th.fc-day-header {
+		border-left: none;
+		padding: 6px 0;
+	}
+	th.fc-week-number {
+		background: #f2f2f2;
+		padding: 0 6px;
+	}
+	th.fc-week-number + th.fc-day-header {
+		border-left: 1px solid #ddd !important;
+	}
+	td.fc-week-number {
+		background: #f2f2f2;
+		div {
+			padding: 0;
+		}
+	}
+}
+
+.fc-event {
+	.border-radius(0) !important;
+}
+
+a.fc-event {
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+		color: #fff;
+	}
+}
+
+.fc-state-highlight {
+	background: #fcf3d0;
+}
+

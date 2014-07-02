@@ -1,0 +1,54 @@
+.ms-container {
+	width: auto;
+	background: url(../img/multiselect_switch.png) no-repeat 50% 40%;
+	.ms-list {
+		.box-shadow(none);
+		.border-radius(0);
+		border-color: #ddd;
+		height: 194px;
+		&.ms-focus {
+			.box-shadow(none);
+			border-color: #66afe9;
+		}
+	}
+	.ms-optgroup-label {
+		color: @text-primary;
+		background: #f8f8f8;
+		font-size: 11px;
+		text-transform: uppercase;
+		border-bottom: 1px solid #eee;
+		padding: 3px 0 3px 5px;
+		text-align: center;
+	}
+	.ms-selectable li.ms-elem-selectable,
+	.ms-selection li.ms-elem-selection {
+		font-size: 12px;
+		padding: 3px 10px;
+		> span {
+			cursor: pointer;
+			display: block;
+		}
+	}
+	.ms-selectable li,
+	.ms-selection li {
+		&.ms-hover {
+			background: @active-background;
+		}
+	}
+	.custom-header,.custom-footer {
+		background: #ddd;
+		font-size: 12px;
+		padding: 5px 10px;
+		line-height: 18px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.custom-header-search {
+		background: #ddd;
+		padding: 5px;
+		input {
+			border: none;
+			height: 26px;
+		}
+	}
+}

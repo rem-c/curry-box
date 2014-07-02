@@ -1,0 +1,237 @@
+// side navigation
+	#side_nav {
+		height: 100%;
+		position: fixed;
+		top: @navbar-height;
+		z-index: 10;
+		&,
+		> ul {
+			background: #363f44;
+			left: 0;
+			width: 80px;
+		}
+		> ul {
+			bottom: 0;
+			position: absolute;
+			top: 0;
+			> li {
+				display: block;
+				> a {
+					color: rgba(255,255,255,.75);
+					display: block;
+					font-size: 32px;
+					outline: none;
+					padding: 5px 0;
+					position: relative;
+					text-align: center;
+					text-decoration: none !important;
+					.label {
+						font-size: 11px;
+						font-weight: normal;
+						line-height: 13px;
+						padding: 0 3px;
+						position: absolute;
+						right: 10px;
+						top: 4px;
+					}
+					// arrow indicator
+					&:before {
+						position: absolute;
+						right: -14px;
+						top: 18px;
+						content: '';
+						border: 8px solid rgba(0,0,0,0);
+						border-right-color: #fff;
+						height: 0;
+						width: 0;
+						.opacity(0);
+					}
+				}
+				&.nav_open > a,
+				> a,
+				> a:before {
+					.transition(all 400ms ease);
+				}
+				&.nav_open > a {
+					background: rgba(255,255,255,.2);
+					color: #fff;
+				}
+			}
+			> li.nav_open {
+				> a:before {
+					.opacity(1);
+					right: 0;
+				}
+			}
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		.sub_panel {
+			border-width: 0 1px 0 0;
+			border-style: solid;
+			border-color: #ccc;
+			.box-shadow(2px 0 0 2px rgba(0,0,0,.16));
+			position: fixed;
+			left: -400px;
+			top: 42px;
+			height: 100%;
+			background: #fff;
+			list-style: none;
+			z-index: -1;
+			width: 216px;
+			ul {
+				margin: 0;
+				list-style: none;
+				border-bottom: 1px solid #e9e9e9;
+				border-top: 1px solid #e9e9e9;
+				background: #f6f6f6;
+				position: relative;
+				a {
+					padding: 8px 14px;
+					display: block;
+					font-size: 13px;
+					position: relative;
+					color: @text-primary;
+					&:hover,
+					&:focus {
+						background: #eaeaea;
+						text-decoration: none;
+					}
+					.badge {
+						font-size: 11px;
+						padding: 0 7px;
+						float: right;
+						line-height: 15px;
+						margin-top: 2px;
+						margin-left: 2px;
+					}
+					small {
+						display: inline-block;
+						margin-top: 4px;
+					}
+				}
+				li + li a {
+					border-top: 1px dashed #ddd;
+				}
+			}
+			.side_icon {
+				font-size: 23px;
+				margin-right: 4px;
+				vertical-align: -3px;
+				min-width: 22px;
+				text-align: center;
+			}
+			.panel_heading {
+				padding: 12px 14px 6px;
+				margin: 0;
+				position: relative;
+				.custom_font(400, 15px, 22px);
+				text-transform: uppercase;
+			}
+			.panel_section {
+				padding: 14px;
+				+ .panel_section {
+					padding-top: 0;
+				}
+			}
+			.panel_section_large {
+				padding: 20px 14px;
+			}
+			ul.ts_picker {
+				list-style: none;
+				padding: 0 4px 4px 0;
+				width: 54px;
+				position: absolute;
+				background: #fff;
+				right: -6px;
+				top: 14px;
+				z-index: 1030;
+				border: 1px solid #ccc;
+				li {
+					width: 12px;
+					height: 12px;
+					margin: 4px 0 0 4px;
+					float: left;
+					cursor: pointer;
+				}
+			}
+		}
+		.nav_title {
+			font-size: 11px;
+			text-align: center;
+			display: block;
+		}
+		.add_label {
+			position: relative;
+			.ts_label {
+				position: absolute;
+				right: 14px;
+				top: 12px;
+				.box-shadow(0 0 0 2px #fff);
+				span {
+					display: block;
+					width: 12px;
+					height: 12px;
+					cursor: pointer;
+					position: relative;
+					&:hover:after,
+					&.act_picker:after {
+						content: '';
+						position: absolute;
+						right: 2px;
+						top: 4px;
+						border: 4px solid transparent;
+						border-top-color: rgba(255,255,255,.6);
+					}
+				}
+			}
+		}
+	}
+	.side_nav_narrow {
+		#side_nav {
+			&,
+			> ul {
+				width:50px;
+			}
+			> ul {
+				> li > a {
+					font-size: 27px;
+					.label {
+						right: 2px;
+					}
+					.nav_title {
+						display: none;
+					}
+				}
+			}
+		}
+		#main_wrapper {
+			margin-left: 50px;
+		}
+	}
+
+// media queries
+	@media (max-width: 992px) {
+		#side_nav {
+			&,
+			> ul {
+				width:50px;
+			}
+			> ul {
+				> li > a {
+					font-size: 27px;
+					.label {
+						right: 2px;
+					}
+					.nav_title {
+						display: none;
+					}
+				}
+			}
+		}
+		#main_wrapper {
+			margin-left: 50px;
+		}
+	}

@@ -1,0 +1,466 @@
+/* Tisa Admin Main Styles */
+
+// variables, mixins
+@import "tisa_variables_mixins";
+	
+	html {
+		margin-right: 0 !important;
+		overflow-x: hidden;
+	}
+
+	body {
+		background: @body-main-bg;
+		padding-top: @navbar-height;
+		overflow-y: scroll;
+		width: 100%;
+		color: @text-primary;
+	}
+	
+	body, html {
+		height: 100%;
+	}
+	
+	a,.btn {
+		outline: none !important;
+	}
+
+/* helpers */
+	.sepH_a { margin-bottom: 10px }
+	.sepH_b { margin-bottom: 20px }
+	.sepH_c { margin-bottom: 30px }
+	
+	.sepV_a { margin-right: 10px }
+	.sepV_b { margin-right: 20px }
+	.sepV_c { margin-right: 30px }
+	
+	.color_a { background: @color_a	}
+	.color_b { background: @color_b	}
+	.color_c { background: @color_c	}
+	.color_d { background: @color_d	}
+	.color_e { background: @color_e	}
+	.color_f { background: @color_f	}
+	.color_g { background: @color_g	}
+	.color_h { background: @color_h	}
+	.color_i { background: @color_i	}
+	
+	h1 {
+		.custom_font(400, 36px, 39px);
+	}
+	h2 {
+		.custom_font(400, 32px, 35px);
+	}
+	h3 {
+		.custom_font(400, 28px, 31px);
+	}
+	h4 {
+		.custom_font(400, 20px, 23px);
+	}
+	h5 {
+		.custom_font(400, 16px, 19px);
+	}
+	.heading_a {
+		font-size: 13px;
+		text-transform: uppercase;
+		margin: 0 0 2px;
+		& + .row {
+			margin-top: 6px
+		}
+	}
+	.row + .heading_a {
+		margin-top: 20px;
+	}
+	.heading_b {
+		font-size: 16px;
+		margin: 0 0 10px;
+		border-bottom: 1px dashed #ddd;
+		padding: 0 8px 4px;
+		& + .row {
+			margin-top: 4px
+		}
+	}
+	.row + .heading_b {
+		margin-top: 20px;
+	}
+	
+	.info_table {
+		strong {
+			font-size: 15px;
+			margin: 0;
+			display: block;
+			line-height: 18px;
+		}
+		.text-muted {
+			font-size: 12px;
+		}
+		h4,
+		h5 {
+			margin: 2px 0;
+		}
+	}
+	
+	.grid_visual [class*='col-'] span {
+		display: block;
+		padding: 0 10px;
+		background: #f2f2f2;
+		border: 1px solid #ddd;
+		min-height: 32px;
+		line-height: 32px;
+	}
+	
+	.icon-list {
+		margin: 0 0 10px;
+		padding: 0;
+		list-style: none;
+		li {
+			width: 20%;
+			float: left;
+			height: 88px;
+			padding: 10px;
+			border: 1px solid #eee;
+			text-align: center;
+			margin: -1px 0 0 -1px;
+			span {
+				font-size: 24px;
+			}
+			code {
+				padding-top: 4px;
+				background: none;
+				vertical-align: 6px;
+				white-space: normal;
+				display: block;
+				color: #999;
+			}
+			&:hover {
+				background: @subactive-background;
+				span,
+				code {
+					color: darken(@active-background,10%);	
+				}
+			}
+		}
+	}
+	.icon-list-a li span {
+		font-size: 32px;
+	}
+	.icon-list-b li {
+		width: 12.5%;
+		height: 94px;
+		i {
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+	}
+		
+	@media (max-width: 1480px) {
+		.icon-list li {
+			width: 25%;
+		}
+		.icon-list-b li {
+			width: 20%;
+		}
+	}
+	@media (max-width: 1200px) {
+		.icon-list li {
+			width: 33.333333%;
+		}
+		.icon-list-b li {
+			width: 25%;
+		}
+	}
+	@media (max-width: 991px) {
+		.icon-list li {
+			width: 50%;
+		}
+		.icon-list-b li {
+			width: 33.333333%;
+		}
+	}
+	@media (max-width: 767px) {
+		.icon-list li {
+			width: 100%;
+		}
+		.icon-list-b li {
+			width: 50%;
+		}
+	}
+	
+	address p {
+		.custom_font(400, 15px, 18px);
+		margin: 0;
+	}
+	address p + p {
+		margin-top: 6px;
+	}
+	address .addres_name {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 6px;
+	}
+
+
+/* remove webkit inner shadow */
+	textarea, input[type="text"],input[type="password"],input[type="submit"] {
+		-webkit-appearance: none;
+	}
+/* webkit extra margin fix */
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		button {
+			margin: 0;
+		}
+	}
+
+// bootstrap overide
+	@import "tisa_bootstrap_override";
+	@import "tisa_navbar";
+	
+	
+/* main content */
+	#main_wrapper {
+		position:relative;
+		margin: 0 0 0 80px;
+		min-height: 100%;
+		max-width: 100%;
+		padding-left: 0;
+		overflow: hidden;
+	}
+	.page_content {
+		padding: 15px 10px 30px;
+	}
+	
+/* breadcrumbs */
+	.breadcrumbs {
+		background: #f1f1f1;
+		border-bottom: 1px solid #ddd;
+		min-height: 28px;
+		padding: 8px 25px;
+		margin-bottom: 20px;
+		position: relative;
+		font-size: 12px;
+		ul {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			li {
+				list-style: none;
+				float: left;
+				&.sep {
+					padding:0 8px
+				}
+			}
+		}
+	}
+	
+// side navigation
+	@import "tisa_side_nav";
+	// accordion nav
+	@import "tisa_side_nav_acc";
+	/* content without sidebar */
+	.no_sidebar #wrapper {
+		margin-left: 0;
+	}
+	
+/* top page bar */
+	.page_bar {
+		border-bottom: 1px solid #e8e8e8;
+		margin-bottom: 20px;
+		padding: 15px 25px;
+		background: #fff;
+		.page_title {
+			.custom_font(400, 24px, 28px);
+			margin: 0;
+			+ p {
+				margin: 4px 0 0;
+				font-size: 12px;
+			}
+		}
+	}
+	.page_bar + .breadcrumbs {
+		margin-top: -20px;
+	}
+
+// image grid
+	@import "tisa_image_grid";
+
+/* pages */
+	// dashboard
+	@import "tisa_dashboard";
+	// todo
+	@import "tisa_todo";
+	// newsletter
+	@import "tisa_newsletter";
+	// mailbox
+	@import "tisa_mailbox";
+	// mailbox
+	@import "tisa_user_profile";
+	// invoice
+	@import "tisa_invoice";
+
+/* plugins */
+	/* textarea autosize */
+	.autosize {
+		.transition(height 0.2s ease-out,padding 0s ease-out);
+		resize: none;
+		max-height: 200px;
+	}
+	// clndr //
+	@import "tisa_clndr";
+	// easy chart pie //
+	@import "tisa_chart_pie";
+	// flot charts //
+	@import "tisa_flot_charts";
+	// nvd3 charts //
+	@import "tisa_nvd3_charts";
+	// peity charts //
+	@import "tisa_peity_charts";
+	// datepicker //
+	@import "tisa_datepicker";
+	// perfect scrollbar //
+	@import "tisa_perfect_scrollbar";
+	// daterangepicker //
+	@import "tisa_daterangepicker";
+	// select2 //
+	@import "tisa_select2";
+	// button switches //
+	@import "tisa_switches";
+	// multiselect //
+	@import "tisa_multiselect";
+	// multiupload //
+	@import "tisa_multiupload";
+	// icheck //
+	[class*='icheckbox_'] {
+		text-align: left;
+		> input {
+			display: none;
+		}
+	}
+	// ckeditor //
+	.cke_chrome {
+		.box-shadow(none) !important;
+	}
+	.cke_editable.cke_editable_inline.cke_focus {
+		background: #fbfbfb;
+		.box-shadow(inset 0 0 10px 1px #ddd;inset 0 0 1px #777);
+		cursor: text;
+		outline: medium none;
+	}
+	[contenteditable="true"] {
+		padding: 10px
+	}
+	// magnific popup //
+	@import "tisa_magnific_popup";
+	// rowlink //
+	@import "tisa_rowlink";
+	// footable //
+	@import "tisa_footable";
+	// timepicker //
+	@import "tisa_timepicker";
+	// timepicker //
+	@import "tisa_rangeSlider";
+	// validation //
+	@import "tisa_validation";
+	// wizard //
+	@import "tisa_wizard";
+	// datatables //
+	@import "tisa_datatables";
+	// calendar //
+	@import "tisa_calendar";
+	// editable elements //
+	@import "tisa_editable_elements";
+	// typeahead //
+	@import "tisa_typeahead";
+	// freewall (gallery, grid layout) //
+	@import "tisa_freewall";
+	// noty notifications //
+	@import "tisa_noty";
+	// ios-style notifications
+	@import "tisa_ios_notifications";
+	// power tooltip
+	@import "tisa_powertip";
+	// power tooltip
+	@import "tisa_chat";
+	// owl carousel
+	@import "tisa_owl_carousel";
+	// slidebar
+	@import "tisa_slidebar";
+	// listNav plugin
+	@import "tisa_listnav";
+	
+/* tables */
+	.sub_col {
+        vertical-align: middle;
+        text-align: center;
+    }
+    .col_sm {
+        width: 20px;
+    }
+	.col_md {
+		width: 80px;
+	}
+
+
+// square style
+	@import "tisa_square";
+
+// themes
+	@import "tisa_themes";
+
+// style switcher
+	@import "tisa_style_switcher";
+		
+/* media queries */
+	@media (max-width: 767px) {
+		[class*='col-sm'] {
+			margin-bottom: 20px
+		}
+		.col-sm-12 {
+			margin-bottom: 0;
+		}
+		.page_bar [class*='col-sm'] {
+			&.text-right {
+				text-align: left;
+			}
+		}
+		header .container-fluid {
+			padding-right: 0;
+			padding-left: 10px;
+		}
+	}
+	@media (min-width: 768px) { }
+	@media (max-width: 991px) {
+		body {padding-top:42px}
+		#main_wrapper {
+			margin-left: 50px;
+		}
+		[class*='col-md'] {
+			margin-bottom: 20px
+		}
+		.col-md-12 {
+			margin-bottom: 0;
+		}
+		label[class*='col-md'] + [class*='col-md'] {
+			margin-top: 0;
+		}
+		.page_bar [class*='col-md'] {
+			&.text-right {
+				text-align: left;
+			}
+		}
+	}
+	@media (min-width: 992px) {	}
+	@media (max-width: 1200px) {
+		[class*='col-lg'] {
+			margin-bottom: 20px
+		}
+		.col-lg-12 {
+			margin-bottom: 0;
+		}
+		label[class*='col-lg'] + [class*='col-lg'] {
+			margin-top: 0;
+		}
+		.page_bar [class*='col-lg']{
+			&.text-right {
+				text-align: left;
+			}
+		}
+	}
+	@media (min-width: 1200px) { }

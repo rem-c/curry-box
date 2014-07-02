@@ -1,0 +1,158 @@
+.noselect{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+}
+ #mini-clndr{
+    margin:0 auto;
+}
+ #mini-clndr .clndr{
+    overflow:hidden;
+	margin-bottom:20px;
+	-webkit-box-shadow: 0 2px 1px rgba(0,0,0,.08);-moz-box-shadow: 0 2px 1px rgba(0,0,0,.08);box-shadow: 0 2px 1px rgba(0,0,0,.08);
+}
+#mini-clndr .clndr .controls{
+    color:#222;
+	border: 1px solid #ddd;
+	background: #f0f0f0;
+}
+#mini-clndr .clndr .controls .clndr-previous-button,#mini-clndr .clndr .controls .clndr-next-button{
+    width:15%;
+    padding-top:5px;
+    padding-bottom:5px;
+    display:inline-block;
+    text-align:center;
+    cursor:pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+}
+#mini-clndr .clndr .controls .clndr-previous-button:hover,#mini-clndr .clndr .controls .clndr-next-button:hover{
+}
+ #mini-clndr .clndr .controls .month{
+    width:70%;
+    padding-top:5px;
+    padding-bottom:5px;
+    display:inline-block;
+    text-align:center;
+    font:400 20px/32px 'Source Sans Pro', sans-serif;
+}
+ #mini-clndr .clndr .days-container{
+    position:relative;
+    display:block;
+	height:auto
+
+}
+#mini-clndr .clndr .days-container .days{
+    width:100%;
+    height:auto;
+    background-color:#fff;
+	border-left:1px solid #ddd;
+}
+#mini-clndr .clndr .days-container .days .day,#mini-clndr .clndr .days-container .days .empty{
+    width:14.285714%;
+    display:inline-block;
+    padding-top:8px;
+    padding-bottom:8px;
+    font:400 16px/32px 'Source Sans Pro', sans-serif;
+    text-align:center;
+    color:#222;
+    border-right:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+	line-height:32px;
+}
+#mini-clndr .clndr .days-container .days .today {background:#fcf3d0}
+#mini-clndr .clndr .days-container .days .day.event,#mini-clndr .clndr .days-container .days .empty.event{
+    cursor:pointer;
+	color:#222;
+	position:relative;
+}
+#mini-clndr .clndr .days-container .days .day.event:after,#mini-clndr .clndr .days-container .days .empty.event:after{
+    position:absolute;right:25%;bottom:8px;content:'';display:block;width: 50%;height: 0px;border-style: solid;border-width: 0 0 3px;border-color:#64B92A;
+}
+ #mini-clndr .clndr .days-container .days .day.adjacent-month,#mini-clndr .clndr .days-container .days .empty.adjacent-month{
+    color:#aaa;
+	background:#ebebeb;
+}
+ #mini-clndr .clndr .days-container .days .empty{
+    height:31px;
+    vertical-align:bottom
+}
+ #mini-clndr .clndr .days-container .days .headers{
+    padding-top:5px;
+    padding-bottom:5px;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+}
+#mini-clndr .clndr .days-container .days .headers .day-header{
+    width:14.285714%;
+    display:inline-block;
+    text-align:center;
+}
+ #mini-clndr .clndr .days-container .events{
+    position:absolute;
+    left:100%;
+	top:0;
+    width:100%;
+    height:100%;
+    -webkit-transition:left .5s;
+    -moz-transition:left .5s;
+    -ms-transition:left .5s;
+    -o-transition:left .5s;
+    transition:left .5s;
+    background-color:#ebebeb;
+	background: rgba(0,0,0,.75)
+}
+#mini-clndr .clndr .days-container .events .headers{
+    position:relative
+}
+ #mini-clndr .clndr .days-container .events .event-header{
+    width:100%;
+    background-color:#fff;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align:center;
+    color:#222;
+}
+ #mini-clndr .clndr .days-container .events .x-button{
+    position:absolute;
+    font-size:80%;
+    top:8px;
+    right:12px;
+    cursor:pointer;
+}
+#mini-clndr .clndr .days-container .events .events-list-wrapper{
+    overflow:auto;
+	position:absolute;
+	left:0;
+	right:0;
+	top:30px;
+	bottom:0;
+}
+#mini-clndr .clndr .days-container .events .events-list{
+	padding:10px
+}
+#mini-clndr .clndr .days-container .events .events-list .event{
+    padding:4px 10px;
+}
+
+
+ #mini-clndr .clndr .days-container .events .events-list .event a{
+    position:relative;
+    font-size:12px;
+    letter-spacing:1px;
+    background-color:transparent;
+    color:#fff;
+    text-decoration:none;
+}
+#mini-clndr .clndr .days-container .events .events-list .event a:hover{
+    text-decoration:underline;
+}
+ #mini-clndr .clndr .days-container.show-events .days{
+    left:-294px
+}
+ #mini-clndr .clndr .days-container.show-events .events{
+    left:0
+}

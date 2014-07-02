@@ -1,0 +1,66 @@
+.stat_box {
+	padding: 10px;
+	position: relative;
+	.stat_ico {
+		width: 48px;
+		height: 48px;
+		font-size: 32px;
+		color: #fff;
+		float: left;
+		text-align: center;
+		margin-right: 16px;
+		padding-top: 2px;
+	}
+	.stat_content {
+		overflow: hidden;
+		.stat_name {
+			font-size: 11px;
+			display: block;
+			margin-top: 2px;
+			color: #888;
+		}
+		.stat_count {
+			.custom_font(400, 28px, 30px);
+		}
+	}
+	&.stat_up,
+	&.stat_down {
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+		}
+		&:after {
+			width: 0;
+			height: 0;
+			right: 13px;
+			border: 9px solid transparent;
+		}
+		&:before {
+			width: 8px;
+			height: 5px;
+			right: 18px;
+		}
+	}
+	&.stat_up {
+		&:after {
+			margin-top: -17px;
+			border-bottom-color: @brand-success;
+		}
+		&:before {
+			margin-top: 2px;
+			background: @brand-success;
+		}
+	}
+	&.stat_down {
+		&:after {
+			margin-top: -1px;
+			border-top-color: @brand-danger;
+		}
+		&:before {
+			margin-top: -7px;
+			background: @brand-danger;
+		}
+	}
+}

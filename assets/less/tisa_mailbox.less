@@ -1,0 +1,70 @@
+.mail_table {
+	a {
+		color: @text-primary;
+	}
+	tbody {
+		tr {
+			td {
+				vertical-align: middle;
+				background: #f9f9f9;
+				font-size: 13px;
+				.mail_star {
+					display: block;
+					color: #999;
+					cursor: pointer;
+					font-size: 15px;
+					&:hover {
+						color: @text-primary;
+					}
+				}
+			}
+			.mail_stared .mail_star {
+				&,
+				&:hover {
+					color: #ffdd46;
+				}
+			}
+			.label {
+				vertical-align: 2px;
+			}
+		}
+		tr.unreaded td {
+			background: #fff;
+			font-weight: 700;
+		}
+		tr.active_row{
+			td,
+			&:hover td {
+				background: #ffd;
+			}
+		}
+	}
+	tfoot tr td {
+		border-top: 2px solid #e3e3e3;
+		background: #fff;
+		padding-top: 14px;
+	}
+}
+	
+	.mailbox_nav {padding:10px 0 0}
+	.mailbox_content table tr:first-child td {border-top:none}
+	.mailbox_content table tr td {background:#f9f9f9}
+	.mailbox_content table tfoot td {border-top:1px solid #e3e3e3 !important;background:#fff;padding-top:14px}
+	.mailbox_content table a {color:#333}
+	.mailbox_content .mbox_star span {color:#999;cursor:pointer}
+	.mailbox_content .mbox_star span.star_hover {color:#333}
+	.mailbox_content .unreaded {font-weight:700}
+	.mailbox_content .unreaded td {background:#fff}
+	.mail_message_top {max-height:70px;border-bottom:1px solid #e1e1e1;margin-bottom:10px;padding-bottom:10px;padding-top:10px}
+	.mail_message_top .img-thumbnail {margin:2px 16px 0 16px;display:block;float:left}
+	.mail_message_top .user_name {font:300 20px/24px 'Roboto', sans-serif;margin:0 0 4px}
+	.mail_message_top .user_name span {font-size:14px}
+	.mail_message_top .mail_address {font:300 15px/20px 'Roboto', sans-serif;margin:0;color:#888}
+	.mail_message_top .mail_actions {float:right;padding:12px 10px 0 0}
+	.mail_message_top .mail_actions .mail_date {font-size:12px;color:#888;margin-right:10px}
+	.mail_message_content {padding:20px;font-size: 14px}
+	.mail_message_content .mail_attachment {border-top:1px dashed #e3e3e3;padding-top:10px;margin-top:40px}
+	.mail_message_content .mail_attachment p {font-size:12px}
+	.mail_message_content .mail_attachment p span {margin-right:10px}
+	.mail_message_content .mail_attachment p a {margin-left:30px}
+	.mail_message_footer {padding:20px}

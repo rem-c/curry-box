@@ -1,0 +1,22 @@
+.table{
+	&.rowlink,
+	.rowlink {
+		td:not(.rowlink-skip) {
+			cursor: pointer;
+			a {
+				color: inherit;
+				font: inherit;
+				text-decoration: inherit;
+			}
+		}
+	}
+}
+
+.table-hover {
+	&.rowlink,
+	.rowlink{
+		> tr:hover td {
+			background: #f2f2f2;	
+		}
+	}
+}

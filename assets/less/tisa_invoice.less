@@ -1,0 +1,19 @@
+.invoice_table {
+    margin-bottom: 30px;
+	> tfoot {
+		> tr > th,
+		> tr > td {
+			border-top: medium none;
+		}
+		> tr:first-child > th,
+		> tr:first-child > td {
+			border-top: 1px solid #ddd;
+		}
+	}
+	.grand_total {
+		font-size: 18px;
+		.col_total {
+			background: none repeat scroll 0 0 #f4f4f4;
+		}
+	}
+}

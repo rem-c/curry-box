@@ -1,0 +1,113 @@
+.datepicker {
+    margin-top: 1px;
+    table {
+        width: 100%;
+        min-width: 240px;
+        thead {
+            .dow {
+                width: 14.2857%;
+				.custom_font(400, 12px, 17px);
+				padding-top: 2px;
+				padding-bottom: 2px;
+            }
+            tr:nth-child(2) {
+                border-bottom:1px solid #eee;
+            }
+            .datepicker-switch {
+				.custom_font(400, 16px, 24px);
+            }
+			.prev,
+			.next {
+				font-size: 14px;
+				padding: 2px 10px 0;
+			}
+        }
+        tbody {
+			border-width: 0 1px 1px 0;
+			border-style: solid;
+			border-color: #eee;
+            .day {
+                border-width: 0 0 1px 1px;
+                border-style: solid;
+                border-color: #eee;
+				font-size: 14px;
+				&.old,
+				&.new {
+					background: #f2f2f2;
+					color: #bbb;
+				}
+            }
+            tr {
+                .day:last-child {
+                    border-right: none;
+                }
+				&:last-child .day {
+					border-bottom: none;
+				}
+            }
+        }
+		.td.active,
+		.td.active:hover {
+			background: #fcf3d0;
+			color: @text-primary;
+			text-shadow: none;
+		}
+		td.day:hover,
+		tr td.day:hover,
+		tr:first-child th:hover {
+			border-color: #eee !important;
+			background-color: @active-background;
+			color: #fff;
+		}
+		tr td {
+			&.today,
+			&.today.disabled {
+				background: #fcf3d0 !important;
+				border-color: #eee !important;
+			}
+			&.active,
+			&.active:hover,
+			&.active.disabled,
+			&.active.disabled:hover,
+			span.active,
+			span.active:hover,
+			span.active.disabled,
+			span.active.disabled:hover,
+			&.today:hover,
+			&.today.disabled:hover {
+				filter: none;
+				text-shadow: none;
+				background: @active-background !important;
+				border-color: #eee !important;
+				color: #fff !important;
+			}
+		}
+		
+    }
+	&,
+	table tr td,
+	table tr th,
+	table tr td span {
+		.border-radius(0);
+	}
+	&.dropdown-menu {
+		.border-radius(0);
+		padding: 4px;
+	}
+}
+
+.datepicker .datepicker-months,
+.datepicker .datepicker-years {
+	tbody {
+		border: none;
+	}
+}
+
+.datepicker-inline {
+    width: 250px;
+	border: 1px solid #ddd;
+	table tbody .day {
+		background: #fff
+	}
+}
+

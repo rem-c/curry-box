@@ -1,0 +1,116 @@
+/* listNav plugin */
+
+.listNav,
+.ln-letters {
+	overflow:hidden;
+}
+.listNav {
+	.listNavHide {
+		display: none;
+	}
+}
+.listNavHide { }
+.listNavShow { }
+.letterCountShow {
+	display:block;
+}
+.ln-letters {
+	padding: 5px 0;
+	a {
+		font-size: 12px;
+		display: block;
+		float: left;
+		padding: 0 8px;
+		height: 22px;
+		line-height: 22px;
+		background: #eee;
+		color: @text-primary;
+		text-decoration: none;
+		margin: 0 4px 4px 0;
+	}
+	a:hover,
+	.ln-selected {
+		background-color: @active-background;
+		color: #fff;
+	}
+	.ln-disabled {
+		color:#ccc;
+	}
+}
+
+.ln-letter-count {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20px;
+	text-align:center;
+	font-size: 11px;
+	color: #999;
+}
+
+.ln-no-match {
+	&.listNavHide {
+		display: none;
+	}
+	&.listNavShow {
+		display: block;
+	}
+}
+
+.user_list {
+	margin: 8px 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px dashed #e8e8e8;
+	li {
+		padding: 10px;
+		border-bottom: 1px dashed #e8e8e8;
+		overflow: hidden;
+		h4 {
+			margin: 0;
+			font-size: 18px;
+		}
+		p {
+			margin: 0;
+		}
+		img {
+			margin-right: 10px;
+			float: left;
+		}
+		.list_content {
+			overflow: hidden;
+		}
+		.user_actions {
+			float: right;
+			margin: 4px 4px 0;
+			.fa {
+				margin-left: 4px;
+				cursor: pointer;
+			}
+		}
+		.user_check  {
+			height: 70px;
+			width: 32px;
+			float: left;
+			padding-top: 2px;
+		}
+	}
+}
+
+.user_list_action {
+	overflow: hidden;
+	.user_check_all {
+		width: 32px;
+		padding: 6px 10px 0;
+		float: left;
+		margin-right: 10px;
+	}
+	select {
+		width: 140px;
+		@media (max-width: 767px) {
+			width: 80px;
+		}
+		float: left;
+		margin-right: 4px;
+	}
+}

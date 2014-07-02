@@ -1,0 +1,105 @@
+/* PowerTip Plugin */
+#powerTip {
+	cursor: default;
+	background-color: #333;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	display: none;
+	padding: 6px 8px;
+	font-size: 12px;
+	position: absolute;
+	white-space: nowrap;
+	z-index: 2147483647;
+	p {
+		margin-bottom: 2px;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+	}
+	&.n:before,
+	&.s:before {
+		border-right: 5px solid transparent;
+		border-left: 5px solid transparent;
+		left: 50%;
+		margin-left: -5px;
+	}
+	&.e:before,
+	&.w:before {
+		border-bottom: 5px solid transparent;
+		border-top: 5px solid transparent;
+		margin-top: -5px;
+		top: 50%;
+	}
+	&.n:before {
+		border-top: 6px solid #333;
+		border-top: 6px solid rgba(0, 0, 0, 0.8);
+		bottom: -6px;
+	}
+	&.e:before {
+		border-right: 6px solid #333;
+		border-right: 6px solid rgba(0, 0, 0, 0.8);
+		left: -6px;
+	}
+	&.s:before {
+		border-bottom: 6px solid #333;
+		border-bottom: 6px solid rgba(0, 0, 0, 0.8);
+		top: -6px;
+	}
+	&.w:before {
+		border-left: 6px solid #333;
+		border-left: 6px solid rgba(0, 0, 0, 0.8);
+		right: -6px;
+	}
+	&.ne:before,
+	&.se:before {
+		border-right: 10px solid transparent;
+		border-left: 0;
+		left: 8px;
+	}
+	&.nw:before,
+	&.sw:before {
+		border-left: 10px solid transparent;
+		border-right: 0;
+		right: 8px;
+	}
+	&.ne:before,
+	&.nw:before {
+		border-top: 6px solid #333;
+		border-top: 6px solid rgba(0, 0, 0, 0.8);
+		bottom: -6px;
+	}
+	&.se:before,
+	&.sw:before {
+		border-bottom: 6px solid #333;
+		border-bottom: 6px solid rgba(0, 0, 0, 0.8);
+		top: -6px;
+	}
+	&.nw-alt:before,
+	&.ne-alt:before,
+	&.sw-alt:before,
+	&.se-alt:before {
+		border-top: 6px solid #333;
+		border-top: 6px solid rgba(0, 0, 0, 0.8);
+		bottom: -6px;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		left: 6px;
+	}
+	&.ne-alt:before {
+		left: auto;
+		right: 6px;
+	}
+	&.sw-alt:before,
+	&.se-alt:before {
+		border-top: none;
+		border-bottom: 6px solid #333;
+		border-bottom: 6px solid rgba(0, 0, 0, 0.8);
+		bottom: auto;
+		top: -6px;
+	}
+	&.se-alt:before {
+		left: auto;
+		right: 6px;
+	}
+}

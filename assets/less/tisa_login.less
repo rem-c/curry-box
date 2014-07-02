@@ -1,0 +1,243 @@
+/* Tisa Admin Login Page*/
+
+
+@import "tisa_variables_mixins";
+/* square style */
+	@import "tisa_square";
+
+	body {
+		background: #ecf0f1;
+		padding-top: 40px;
+	}
+
+	/* remove webkit inner shadow */
+	textarea, input[type="text"], input[type="password"],input[type="submit"] {
+		-webkit-appearance: none;
+	}
+	/* webkit extra margin fix */
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		button {
+			margin: 0;
+		}
+	}
+
+	.modal-content {
+		.box-shadow(0 0 30px rgba(0,0,0,0.2));
+	}
+	.modal-footer {
+		padding: 10px 20px 11px;
+		text-align: center;
+		border-top: 1px dashed #ddd;
+		background: #f8f8f8;
+	}
+	.modal-header {
+		padding: 15px 15px 8px;
+		border-bottom: none;
+	}
+	.modal-header {
+		.close {
+			margin-top: -10px;
+			margin-right: -4px;
+		}
+	}
+	.modal-title {
+		.custom_font(400, 18px, 22px);
+	}
+	.modal-backdrop {
+		background: #000;
+	}
+	.modal-backdrop {
+		&.in {
+			.opacity(0.6)
+		}
+	}
+	.btn,
+	.btn.disabled,
+	.btn[disabled] {
+		border-color: #d3d7d7;
+	}
+	.btn:hover,
+	.btn:focus,
+	.btn:active,
+	.btn.active {
+		background: #d3d7d7;
+	}
+	.btn {
+		.transition(border-color 0.3s,background-color 0.3s);
+	}
+	.btn-default {
+		.button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+	}
+	.btn-primary {
+		.button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+	}
+	.btn-success {
+		.button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+	}
+	label {
+		font-size: 12px;
+		display: block;
+		font-weight: normal;
+	}
+	.form-control {
+		border-width: 1px;
+		border-style: solid;
+		border-color: #ddd #eee #eee #ddd;
+		padding: 6px 16px;
+		.box-shadow(none);
+		&:-moz-placeholder,
+		&::-moz-placeholder,
+		&:-ms-input-placeholder,
+		&::-webkit-input-placeholder,
+		&.placeholder {
+			color: #bdc3c7;
+		}
+		&:focus {
+			-webkit-backface-visibility: hidden;
+			outline: none;
+			.transition(0.25s);
+			.box-shadow(none);
+		}
+		&[disabled],
+		&[readonly],
+		fieldset[disabled] & {
+			cursor: not-allowed;
+			.opacity(0.4);
+		}
+	}
+	.radio,
+	.radio-inline,
+	.checkbox,
+	.checkbox-inline {
+		margin-left: 4px;
+		input {
+			margin-top: 2px;
+		}
+		label {
+			display: inline-block;
+			font-size: 13px;
+			vertical-align: 2px;
+			margin: 0;
+		}
+	}
+	.help-block {
+		font-size: 12px;
+		color: #888;
+		margin-bottom: 0;
+		a {
+			color: #888
+		}
+	}
+	label,
+	.help-block {
+		padding-left: 4px;
+	}
+	
+	.login_heading {
+		font: 400 28px/32px "Source Sans Pro",sans-serif;
+		margin: 0 0 30px;
+		overflow: hidden;
+		span {
+			color: #888;
+			a {
+				color: #888;
+			}
+		}
+	}
+	
+	.submit_section {
+		margin-top: 30px;
+	}
+	.login_container {
+		width: 380px;
+		margin: 0 auto;
+		position: relative;
+		> form {
+			width: 380px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 20px;
+			background: #fff;
+			border: 1px solid #ddd;
+		}
+	}
+	
+/* css3 animation (http://daneden.github.io/animate.css/) */
+	.animated {
+		-webkit-animation-duration: 700ms;
+		animation-duration: 700ms;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+	
+	@-webkit-keyframes fadeOutDown {
+		0% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 0;
+			-webkit-transform: translateY(20px);
+			transform: translateY(20px);
+		}
+	}
+	@keyframes fadeOutDown {
+		0% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 0;
+			-webkit-transform: translateY(20px);
+			-ms-transform: translateY(20px);
+			transform: translateY(20px);
+		}
+	}
+	.fadeOutDown {
+		-webkit-animation-name: fadeOutDown;
+		animation-name: fadeOutDown;
+	}
+	
+	@-webkit-keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(20px);
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+	@keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(20px);
+			-ms-transform: translateY(20px);
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+	.fadeInUp {
+		-webkit-animation-name: fadeInUp;
+		animation-name: fadeInUp;
+	}
+	
+	@media (max-width: 479px) {
+		.login_container {
+			width: 240px;
+			form {
+				width: 240px;
+			}
+		}
+	}

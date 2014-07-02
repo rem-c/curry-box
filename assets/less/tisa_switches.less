@@ -1,0 +1,35 @@
+.switch {
+	&,
+	> div > span.switch-handle-on,
+	> div > span.switch-handle-off,
+	&.switch-on > div > label,
+	&.switch-off > div > label {
+		.border-radius(0);
+	}
+	&.switch-focused {
+		.box-shadow(none);
+	}
+	> div > span.switch-success {
+		background-color: @brand-success;
+	}
+	> div > span.switch-warning {
+		background-color: @brand-warning;
+	}
+	> div > span.switch-info {
+		background-color: @brand-info;
+	}
+	> div > span.switch-primary {
+		background-color: @brand-primary;
+	}
+	> div > span.switch-danger {
+		background-color: @brand-danger;
+	}
+	> div > label {
+		.border-radius(0);
+		background-image: url(../img/switch_handle.png);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+}
+
+

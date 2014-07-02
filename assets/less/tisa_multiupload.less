@@ -1,0 +1,88 @@
+.fileinput-button {
+	position: relative;
+	overflow: hidden;
+	.transition(background-color 300ms);
+	input {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		opacity: 0;
+		-ms-filter: 'alpha(opacity=0)';
+		font-size: 200px;
+		direction: ltr;
+		cursor: pointer;
+	}
+}
+
+#upload_progress {
+	.transition(all 500ms);
+	.opacity(0);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background: rgba(0,0,0,.7);
+	padding: 60px;
+	.border-radius(8px);
+	i {
+		font-size: 32px;
+		color: #fff;
+	}
+	&.show_progress {
+		.opacity(1);
+	}
+}
+
+.multiupload {
+	.progress {
+		margin: 0;
+	}
+	.progress + .progress-extended {
+		margin-top:10px
+	}
+}
+.table {
+	.upload_img,
+	.download_img {
+		width: 88px;
+		.img-thumbnail {
+			max-height: 88px;
+			min-height: 52px;
+			min-width: 52px;
+			height: auto;
+			text-align: center;
+			a {
+				display: block;
+			}
+		}
+	}
+	.upload_info,
+	.download_info {
+		p {
+			margin:0
+		}
+		.name {
+			font-size: 13px;
+			font-weight: 700
+		}
+		.size {
+			font-size: 11px;
+			color: #999;
+			margin-bottom: 8px;
+		}
+		.alert {
+			padding: 7px 12px;
+			font-size: 13px;
+			margin-bottom: 0;
+		}
+	}
+	.upload_actions,
+	.download_actions {
+		vertical-align: middle;
+		text-align: center;
+	}
+}
+.template-upload tr,
+.template-download tr {
+	overflow:hidden
+}
